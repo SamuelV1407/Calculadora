@@ -27,6 +27,43 @@ public class Calculadora
         return num1 / num2;
     }
 
+    //metodo mayor que otro
+    public void Esmayor(int num1, int num2)
+    {
+        if (num1 > num2)
+        {
+            JOptionPane.showMessageDialog(null, "El numero mayor es: " + num1);
+        }
+        else if (num2 > num1)
+        {
+            JOptionPane.showMessageDialog(null, "El numero mayor es: " + num2);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Los numeros son iguales");
+        }
+    }
+
+    //metodo numero primo
+    public void esprimo (int num)
+    {
+        if (num <= 1)
+        {
+            JOptionPane.showMessageDialog(null, "El numero no es primo");
+            return;
+        }
+        for (int i = 2; i < num; i++)
+        {
+            if (num % i == 0)
+            {
+                JOptionPane.showMessageDialog(null, "El numero no es primo");
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "El numero es primo");
+    }
+
+
     //psvm
     static void main()
     {
@@ -41,6 +78,7 @@ public class Calculadora
         JOptionPane.showMessageDialog(null, "El resultado de la resta es: " + calculadora.resta(num1,num2) );
         JOptionPane.showMessageDialog(null, "El resultado de la división es: " + calculadora.dividir(num1,num2) );
         JOptionPane.showMessageDialog(null, "El resultado de la multiplicación  es: " + calculadora.multiplicar(num1,num2) );
+        calculadora.Esmayor(num1, num2);
+        calculadora.esprimo(num1);
     }
 }
-
