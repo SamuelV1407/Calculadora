@@ -1,45 +1,34 @@
 import javax.swing.*;
 
 //Clase Calculadora
-public class Calculadora
-{
+public class Calculadora {
     //Metodo sumar
-    public int sumar(int num1, int num2)
-    {
+    public int sumar(int num1, int num2) {
         return num1 + num2;
     }
 
     //metodo resta
-    public int resta(int num1, int num2)
-    {
+    public int resta(int num1, int num2) {
         return num1 - num2;
     }
 
     //metodo multiplicar
-    public int multiplicar(int num1, int num2)
-    {
+    public int multiplicar(int num1, int num2) {
         return num1 * num2;
     }
 
     //metodo dividir
-    public double dividir(double num1, double num2)
-    {
+    public double dividir(double num1, double num2) {
         return num1 / num2;
     }
 
-    //metodo mayor que otro
-    public void Esmayor(int num1, int num2)
-    {
-        if (num1 > num2)
-        {
+    //metodo numero mayor
+    public void Esmayor(int num1, int num2) {
+        if (num1 > num2) {
             JOptionPane.showMessageDialog(null, "El numero mayor es: " + num1);
-        }
-        else if (num2 > num1)
-        {
+        } else if (num2 > num1) {
             JOptionPane.showMessageDialog(null, "El numero mayor es: " + num2);
-        }
-        else
-        {
+        } else {
             JOptionPane.showMessageDialog(null, "Los numeros son iguales");
         }
     }
@@ -73,6 +62,9 @@ public class Calculadora
         int num2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor numero 2"));
         //Se muestra el resultado por consola
         System.out.println("El resultado de la suma es: " + calculadora.sumar(num1,num2));
+        System.out.println("El resultado de la resta es: " + calculadora.resta(num1, num2));
+        System.out.println("El resultado de la divicion es: " + calculadora.dividir(num1, num2));
+        System.out.println("El resultado de la multiplicacion es: " + calculadora.multiplicar(num1, num2));
         //Se muestra el resultado por pantalla
         JOptionPane.showMessageDialog(null, "El resultado de la suma es: " + calculadora.sumar(num1,num2) );
         JOptionPane.showMessageDialog(null, "El resultado de la resta es: " + calculadora.resta(num1,num2) );
